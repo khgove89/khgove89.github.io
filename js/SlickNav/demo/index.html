@@ -1,0 +1,62 @@
+<!doctype HTML>
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name="viewport" content="width=device-width">
+
+<title>SlickNav Demo - Responsive Mobile Nav Plugin for jQuery</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="../../jspanel/jquery.jspanel.min.css" />
+<link rel="stylesheet" href="../dist/slicknav.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<style type="text/css">
+	.js #menu {
+		display:none !important;
+	}
+	.js .slicknav_menu {
+		display:block !important;	
+}
+</style>
+</style>
+
+</head>
+<body>
+<p><b>Resize browser to view mobile menu</b></p>
+
+Original Menu hidden on mobile
+<ul id="menu">
+    <li>Parent 1
+        <ul>
+            <li><a href="#">item 3</a></li>
+            <li>Parent 3
+                <ul>
+                    <li><a href="#">item 8</a></li>
+                    <li><a href="#">item 9</a></li>
+                    <li><a href="#">item 10</a></li>
+                </ul>
+            </li>
+            <li><a href="#">item 4</a></li>
+        </ul>
+    </li>
+    <li><a href="#">item 1</a></li>
+    <li>non-link item</li>
+    <li>Parent 2
+        <ul>
+            <li><a href="#">item 5</a></li>
+            <li><a href="#">item 6</a></li>
+            <li><a href="#">item 7</a></li>
+        </ul>
+    </li>
+</ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="../../jspanel/jquery.jspanel.min.js"></script>
+<script src="../dist/jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#menu').slicknav();
+});
+</script>
+</body>
+</html>

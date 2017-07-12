@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+</head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+<!--<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+        $('#startDate').datepicker({});
+		$('#estimateEndDate').datepicker({});
+		$('#completedDate').datepicker({});
+  });
+</script>
+<body>
+
+<div data-role="page" id="mProjectDetail">
+      <div data-role="header">
+          <div id="projectHeader"></div>
+      </div><!-- 
+      <div data-role="content" class="container-fluid">-->    
+        <form id="frmProjects" data-ajax="false" class="form-horizontal">            
+            <h1 class="projectHeader">Project Detail</h1>  
+            <div class="form-group">
+            	<label for="projectName" class="col-sm-2 control-label">Project Name:</label>
+                <div class="col-sm-10">
+                	<input id="projectName" name="projectName" placeholder="Project Name" type="text" value="" class="form-control"/>
+                </div>    
+            </div>
+             <div class="form-group">
+              <label for="description" class="col-sm-2 control-label">Description:</label>
+              <div class="col-sm-10">
+              		<textarea name="description" id="description" cols="2" class="form-control"></textarea>
+              		<!--<input id="description" name="description" placeholder="Project Description" type="text"  value="" class="form-control"/>-->
+              </div>      
+            </div>
+            <div class="form-group">
+              <label for="metric" class="col-sm-2 control-label">Metric:</label>
+              <div class="col-sm-10">
+              		<input id="metric" name="metric" placeholder="Metric" type="text"  value="" class="form-control"/>
+              </div>      
+            </div>
+			<div class="form-group">
+               <label for="status" class="col-sm-2 control-label">Status:</label>
+               <div class="col-sm-2">
+                 <select name="status" id="status" class="form-control">
+                      <option value=""></option>
+                 </select>
+              </div>   
+              <label for="deptPriority" class="col-sm-2 control-label">Dept. Priority</label>
+              <div class="col-sm-2">
+              	<input id="deptPriority" name="deptPriority" placeholder="Dept. Priority" type="text" class="form-control" />
+              </div>
+              <label for="divPriority" class="col-sm-2 control-label">Div. Priority</label>
+              <div class="col-sm-2">
+              	<input id="divPriority" name="divPriority" placeholder="Div. Priority" type="text" class="form-control" />
+              </div>
+              
+           </div>   
+           <div class="form-group">   
+              <label for="division" class="col-sm-2 control-label">Division:</label>
+              <div class="col-sm-2">
+                <select name="division" id="division"  class="form-control">
+                      <option value=""></option>
+                </select>
+              </div>    
+              <label for="sectionAssigned" class="col-sm-2 control-label">Section Assigned:</label>
+              <div class="col-sm-2">
+                <select name="sectionAssigned" id="sectionAssigned" class="form-control">
+                      <option value=""></option>
+                </select>
+              </div>  
+              <label for="staffAssigned" class="col-sm-2 control-label">Staff Assigned:</label>
+                  <div class="col-sm-2">
+                  <input id="staffAssigned" name="staffAssigned" placeholder="Staff Assigned To" type="text" value="" class="form-control"/>
+                  </div> 
+            </div>               
+            <div class="form-group">
+                 <label for="strategicArea" class="col-sm-2 control-label">5 Yr. Strategic Area:</label>
+              <div class="col-sm-2">
+              	<input id="strategicArea" name="strategicArea" placeholder="5 Yr. Strategic Area" type="text" class="form-control" />
+              </div>
+              <label for="mayorPriority" class="col-sm-2 control-label">Mayor Priority Outcome:</label>
+              <div class="col-sm-2">
+              	<input id="mayorPriority" name="mayorPriority" placeholder="Mayor Priority Outcome" type="text" class="form-control" />
+              </div>
+              <label for="councilFile" class="col-sm-2 control-label">Council File</label>
+               <div class="col-sm-2">
+                 <input id="councilFile" name="councilFile" placeholder="Council File" type="text" class="form-control" />
+              </div> 
+            </div> 
+            <div class="form-group">     
+                  <label for="startDate" class="col-sm-2 control-label">Start Date:</label>
+                  <div class="col-sm-2">
+                  <input name="startDate" type="text" id="startDate" class="form-control">
+                  </div>         
+                  <label for="estimateEndDate" class="col-sm-2 control-label">Estimate End Date:</label>
+                  <div class="col-sm-2">
+                  <input name="estimateEndDate" type="text" id="estimateEndDate" class="form-control">
+                  </div>          
+                  <label for="completedDate" class="col-sm-2 control-label">Completed Date:</label>
+                  <div class="col-sm-2">
+                  <input name="completedDate" type="text" id="completedDate" class="form-control">
+                  </div>
+            </div>
+            <div class="form-group">
+              <label for="comments" class="col-sm-2 control-label">Status and Comments</label>
+              <div class="col-sm-10">
+              		<textarea name="comments" id="comments" cols="5" class="form-control"></textarea>
+              		<!--<input id="description" name="description" placeholder="Project Description" type="text"  value="" class="form-control"/>-->
+              </div>      
+            </div>
+            <div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+             	<button id="btnSave" class="btn btn-default" type="Save">Save</button>
+                <button id="btnCancel" class="btn btn-default" type="Cancel">Cancel</button>
+                </div>
+            </div>     
+        </form>
+      <!--</div>-->
+</div> 
+  
+</body>
+</html>
