@@ -1,194 +1,35 @@
 <!doctype HTML>
 <html>
 <head>
-<title>ITSR Layout</title>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="js/jquery.shorten.js"></script>
-<script src="js/Projects.js"></script>
+<script src="js/scripts.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<link href="css/styles.css" rel="stylesheet">-->
+<link href="css/CSS.css" rel="stylesheet">
 </head>
 <body>
-<div class="main-content">       	   
-
-	<div class="Main">
-		Herro Wurld
+<div class="Main">       	   
+	<div class="ReqType">
+		Request Type
+		<div class="RadioSet">
+			<label for="CreateAcct">Create Account</label>
+			<input type="radio" name="ReqType" id="CreateAcct">
+			<label for="ModifyAcct">Modify Account</label>
+			<input type="radio" name="ReqType" id="ModifyAcct">
+			<label for="CreateRpt">Create Report</label>
+			<input type="radio" name="ReqType" id="CreateRpt">
+			<label for="ModifyRpt">Modify Report</label>
+			<input type="radio" name="ReqType" id="ModifyRpt">
+		</div>
+		<div class="CreateAccount">
+			<label for="Application">Application</label>
+			<input type="radio" name="ServiceGroup" id="Application">
+			<label for="Weblogic">Weblogic</label>
+			<input type="radio" name="ServiceGroup" id="Weblogic">
+			<label for="Server">Server</label>
+			<input type="radio" name="ServiceGroup" id="Server">
+		</div>
 	</div>
-
-		<!--<div class="project-detail page" style="display:none;">    
-		<form id="frmProjectEdit" data-ajax="false" class="form-horizontal">          
-		<h1 class="projectHeader">Project Detail</h1>  
-		<div class="form-group">
-		<label for="projectName" class="col-sm-2 control-label"><span class="req">*</span>Project Name:</label>
-		<div class="col-sm-10">
-		<input id="projectName" name="projectName" placeholder="Please Enter Project Name" type="text" value="" class="form-control" required/>
-		</div>    
-		</div>
-		<div class="form-group">
-		<label for="description" class="col-sm-2 control-label">Description:</label>
-		<div class="col-sm-10">
-		<textarea name="description" id="description" cols="2" class="form-control"></textarea>
-		</div>      
-		</div>
-		<div class="form-group">
-		<label for="metric" class="col-sm-2 control-label">Metric:</label>
-		<div class="col-sm-10">
-		<input id="metric" name="metric" type="text"  value="" class="form-control"/>
-		</div>      
-		</div>
-		<div class="form-group">
-		<label for="status" class="col-sm-2 control-label"><span class="req">*</span>Status:</label>
-		<div class="col-sm-2">
-		<select name="status" id="status" class="form-control" required></select>
-		</div>   
-		<label for="deptPriority" class="col-sm-2 control-label">Dept. Priority</label>
-		<div class="col-sm-2">
-		<input id="deptPriority" name="deptPriority" placeholder="Department Priority" type="text" class="form-control" />
-		</div>
-		<label for="divPriority" class="col-sm-2 control-label">Div. Priority</label>
-		<div class="col-sm-2">
-		<input id="divPriority" name="divPriority" placeholder="Division Priority" type="text" class="form-control" />
-		</div>
-
-		</div>   
-		<div class="form-group">   
-		<label for="division" class="col-sm-2 control-label">Division:</label>
-		<div class="col-sm-2">
-		<select name="division" id="division"  class="form-control"><option value="0"></option></select>
-		</div>    
-		<label for="divisionAssigned" class="col-sm-2 control-label">Division Assigned:</label>
-		<div class="col-sm-2">
-		<select name="divisionAssigned" id="divisionAssigned" class="form-control"><option value="0"></option></select>
-		</div>  
-		<label for="staffAssigned" class="col-sm-2 control-label">Staff Assigned:</label>
-		<div class="col-sm-2">
-		<select name="staffAssigned" id="staffAssigned" class="form-control"><option value="0">Unassigned</option></select>
-		</div> 
-		</div>               
-		<div class="form-group">
-		<label for="strategicArea" class="col-sm-2 control-label">5 Yr. Strategic Area:</label>
-		<div class="col-sm-2">
-		<input id="strategicArea" name="strategicArea" placeholder="5 Year Strategic Area" type="text" class="form-control" />
-		</div>
-		<label for="mayorPriority" class="col-sm-2 control-label">Mayor Priority Outcome:</label>
-		<div class="col-sm-2">
-		<input id="mayorPriority" name="mayorPriority" placeholder="Mayor Priority Outcome" type="text" class="form-control" />
-		</div>
-		<label for="councilFile" class="col-sm-2 control-label">Council File</label>
-		<div class="col-sm-2">
-		<input id="councilFile" name="councilFile" placeholder="Council File #" type="text" class="form-control" />
-		</div> 
-		</div> 
-		<div class="form-group">     
-		<label for="startDate" class="col-sm-2 control-label">Start Date:</label>
-		<div class="col-sm-2">
-		<input name="startDate" type="text" id="startDate" class="form-control">
-		</div>         
-		<label for="estimateEndDate" class="col-sm-2 control-label">Estimate End Date:</label>
-		<div class="col-sm-2">
-		<input name="estimateEndDate" type="text" id="estimateEndDate" class="form-control">
-		</div>          
-		<label for="completedDate" class="col-sm-2 control-label">Completed Date:</label>
-		<div class="col-sm-2">
-		<input name="completedDate" type="text" id="completedDate" class="form-control">
-		</div>
-		</div>
-		<div class="form-group">
-		<label for="comments" class="col-sm-2 control-label">Status and Comments</label>
-		<div class="col-sm-10">
-		<textarea name="comments" id="comments" rows="5" class="form-control"></textarea>
-		</div>      
-		</div>
-		<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-		<button id="btnArchive" class="btn btn-archive" type="button" style="display:none">Archive</button>
-		<button id="btnPESave" class="btn btn-primary" type="submit">Save</button>
-		<button id="btnPECancel" class="btn btn-default" type="button" onClick="Javascript:projectDetailCancel();">Cancel</button>
-		<input type="hidden" name="projectID" id="projectID">
-		</div>
-		</div>
-		</form>       
-		</div> 
-		<div class="login page">
-		<div class="account-wall">
-		<h3 class="text-center login-title">Sign in to continue to Project Tracker</h3>
-		<form id="frmLogin" class="form-inline">				          	
-		<div class="form-group">
-		<label class="sr-only" for="empID">Employee ID</label>
-		<input type="text" class="form-control" id="empID" placeholder="Employee ID"  required>
-		</div>
-		<div class="form-group">
-		<label class="sr-only" for="password">Password</label>
-		<input type="password" class="form-control" id="password" placeholder="Password" required>
-		</div>
-		<button type="submit" class="btn btn-primary">Sign in</button>
-		</form>	
-		</div>   
-		</div>
-		<div class="admin page" id="adminTabs" style="display:none;">
-		<ul>
-		<li><a href="#adminUser">User Account</a></li>
-		<li><a href="#adminArchive">Archive</a></li>
-		<li><a href="#adminDelete">Deleted Projects</a></li>
-		<div class="adminExit"><a href="javascript:adminExit();"><img src="/ProjectTracker/image/close42.png" title="Exit Admin" style="-moz-box-shadow: 0px 3px 2px #888; -webkit-box-shadow: 0px 3px 2px #888; box-shadow: 0px 3px 2px #888;-moz-border-radius:180px; -webkit-border-radius:180px; border-radius:180px"></a></div>
-		</ul>
-		<div id="adminUser">
-		<table class="table" id="UserList" style="font-size: 16px;">
-		<thead>
-		<tr>
-		<th style="width:100px;">Employee ID</th>
-		<th>Name</th>
-		<th>Division</th>
-		<th>Security Level</th>
-		<th style="width:200px;">Account Status</th>
-		<th class="no-sort" style="width:150px;">&nbsp;</th></tr>
-		</thead>
-		<tbody></tbody>
-		</table>
-		<div class="user-detail account-wall" >  
-		<form id="frmUserEdit" data-ajax="false" class="form-horizontal" style="width: 98%;margin: 0 auto;float: center;">
-		<div class="form-group">
-		<label for="UserName" class="col-sm-5 control-label"><span class="req">*</span>Employee Name:</label>
-		<div class="col-sm-3">
-		<input id="UserName" name="UserName" type="text" class="form-control">
-		</div>    
-		</div>
-		<div class="form-group">
-		<label for="UserEID" class="col-sm-5 control-label"><span class="req">*</span>Employee ID:</label>
-		<div class="col-sm-3">
-		<input id="UserEID" name="UserEID" type="text" class="form-control">
-		</div>
-		</div>
-		<div class="form-group">
-		<label for="UserDivision" class="col-sm-5 control-label">Division:</label>
-		<div class="col-sm-3">
-		<select id="UserDivision" name="UserDivision" class="form-control"></select>
-		</div>
-		</div>
-		<div class="form-group">
-		<label for="UserSecurity" class="col-sm-5 control-label">Account Level:</label>
-		<div class="col-sm-3">
-		<select id="UserSecurity" name="UserSecurity" class="form-control"></select>
-		</div>
-		</div>
-		<div class="form-group">
-		<label for="UserActive" class="col-sm-5 control-label">Active:</label>
-		<div class="col-sm-3">
-		<input id="UserActive" name="UserActive" class="form-control" type="checkbox" value="1" checked>
-		</div>
-		</div>
-		<input id="UID" type="hidden">
-		<div class="form-group">
-		<div>
-		<button id="btnUserSave" class="btn btn-primary btn-UserSave" type="button">Add User</button>
-		<button id="btnUserCancel" class="btn btn-default btn-UserCancel" type="button">Cancel</button>
-		<button id="btnUserExit" class="btn btn-warning  btn-UserExit" type="button" onClick="javascript:adminExit();">Exit</button>
-		</div>
-		</div>
-		</form>
-		</div>-->
-
 </div>
 </body>
 </html>
