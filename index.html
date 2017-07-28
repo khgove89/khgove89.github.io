@@ -34,7 +34,121 @@
 			<input type="text" name="FNCA"><br>
 			<label for="NetworkIDCA">Network User ID</label>
 			<input type="text" name="NUIDCA">
+			
+			<div class="Applications Hidden">	
+				<label for="AppENV">Environment</label>
+				<select name="AppENV" id="AppENV">
+					<option value="0"></option>
+					<option value="1">CCB</option>
+					<option value="2">MWM</option>
+					<option value="3">MDM</option>
+					<option value="4">BCA</option>
+				</select><br>
+				<div class="SelectCCB Hidden">
+					<label for="ccbdiag">CCBDIAG</label>
+					<input type="checkbox" name="ccbdiag" id="ccbdiag">
+					<label for="ccbtrn1">CCBTRN01</label>
+					<input type="checkbox" name="ccbtrn1" id="ccbtrn1">
+					<label for="ccbtrn3">CCBTRN03</label>
+					<input type="checkbox" name="ccbtrn3" id="ccbtrn3">
+					<label for="ccbdev2">CCBDEV2</label>
+					<input type="checkbox" name="ccbdev2" id="ccbdev2">
+					<label for="ccbint2">CCBINT2</label>
+					<input type="checkbox" name="ccbint2" id="ccbint2">
+					<label for="ccbprd">CCBPRD</label>
+					<input type="checkbox" name="ccbprd" id="ccbprd">
+				</div>
+				<div class="SelectMWM Hidden">
+					<label for="mwmdev2">MWMDEV2</label>
+					<input type="checkbox" name="mwmdev2" id="mwmdev2">
+					<label for="mwmint2">MWMINT2</label>
+					<input type="checkbox" name="mwmint2" id="mwmint2">
+					<label for="mwmprd">MWMPRD</label>
+					<input type="checkbox" name="mwmprd" id="mwmprd">
+				</div>
+				<div class="SelectMDM Hidden">
+					<label for="mdmdev2">MDMDEV2</label>
+					<input type="checkbox" name="mdmdev2" id="mdmdev2">
+					<label for="mdmint2">MDMINT2</label>
+					<input type="checkbox" name="mdmint2" id="mdmint2">
+					<label for="mdmprd">MDMPRD</label>
+					<input type="checkbox" name="mdmprd" id="mdmprd">
+				</div>
+				<div class="SelectBCA Hidden">
+					<label for="bcadev2">BCADEV2</label>
+					<input type="checkbox" name="bcadev2" id="bcadev2">
+					<label for="bcaint2">BCAINT2</label>
+					<input type="checkbox" name="bcaint2" id="bcaint2">
+					<label for="bcaprd">BCAPRD</label>
+					<input type="checkbox" name="bcaprd" id="bcaprd">
+				</div>
+				
+				<p>Additional Environments Requested (ie: CCBDEV2/CCBTRN03)<br>
+				<textarea rows="5" cols="60"></textarea></p>
+				<p>Permissions Requested (ie: CM_ALL_SERVICES_READ)<br>
+				<textarea rows="5" cols="60"></textarea></p>
+				
+				<label for="AppDateStart">Effective Date</label>
+				<input type="text" name="AppDateStart" id="AppDateStart"><br>
+				<label for="AppDateEnd">Date Ending</label>
+				<input type="text" name="AppDateEnd" id="AppDateEnd"><br><br>
+				
+				<label for="ConCheck">Contractor or Outside Department</label>
+				<input id="ConCheck" name="ConCheck" type="checkbox"><br>
+				<div class="Contractor Hidden">
+					<label for="CCompany">Company</label>
+					<input name="CCompany" id="CCompany" type="text">
+				</div>
+				
+				
+				<!--<select name="Who4" id="Who4">
+					<option value="0">DWP Employee</option>
+					<option value="1">Other City Agency</option>
+					<option value="2">Contractor</option>
+				</select><br>
+				-->
+			</div>
+			
+			<div class="Weblogic Hidden">
+				<div>
+					<label for="SOADEV2">SOADEV2</label>
+					<input type="checkbox" name="SOADEV2" id="SOADEV2">
+					<label for="SOAINT2">SOAINT2</label>
+					<input type="checkbox" name="SOAINT2" id="SOAINT2">
+					<label for="SOAPRD">SOAPRD</label>
+					<input type="checkbox" name="SOAPRD" id="SOAPRD">
+				</div>
+				<div>
+					<label for="SOAMDMDEV2">SOAMDMDEV2</label>
+					<input type="checkbox" name="SOAMDMDEV2" id="SOAMDMDEV2">
+					<label for="SOAMDMINT2">SOAMDMINT2</label>
+					<input type="checkbox" name="SOAMDMINT2" id="SOAMDMINT2">
+					<label for="SOAMDMPRD">SOAMDMPRD</label>
+					<input type="checkbox" name="SOAMDMPRD" id="SOAMDMPRD">
+				</div>
+				<div>
+					<label for="OSBDEV2">OSBDEV2</label>
+					<input type="checkbox" name="OSBDEV2" id="OSBDEV2">
+					<label for="OSBMDMINT2">OSBMDMINT2</label>
+					<input type="checkbox" name="OSBMDMINT2" id="OSBMDMINT2">
+					<label for="OSBMDMPRD">OSBMDMPRD</label>
+					<input type="checkbox" name="OSBMDMPRD" id="OSBMDMPRD">
+				</div>
+				<div>
+					<label for="BCADEV2">BCADEV2</label>
+					<input type="checkbox" name="BCADEV2" id="BCADEV2">
+					<label for="BCAINT2">BCAINT2</label>
+					<input type="checkbox" name="BCAINT2" id="BCAINT2">
+					<label for="BCAPRD">BCAPRD</label>
+					<input type="checkbox" name="BCAPRD" id="BCAPRD">
+				</div>
+				<p>Permissions and Environments<br>
+				<textarea rows="5" cols="60"></textarea></p>
+				<label for="WLDate">Effective Date</label>
+				<input type="text" name="WLDate" id="WLDate">
+			</div>			
 		</div>
+		
 		<div class="ModifyAccount Hidden">
 			<label for="Application2">Application</label>
 			<input type="radio" name="ServiceGroup" id="Application2">
@@ -45,155 +159,86 @@
 			<label for="FullNameMA">Full Name</label>
 			<input type="text" name="FNMA"><br>
 			<label for="NetworkIDMA">Network User ID</label>
-			<input type="text" name="NUIDMA">
+			<input type="text" name="NUIDMA"><br><br>
+			
+			<div class="ModApp Hidden">
+				<label for="RemoveAcct">Remove Account</label>
+				<input type="radio" name="ModType" id="RemoveAcct">
+				<label for="ModifyPerm">Modify Account</label>
+				<input type="radio" name="ModType" id="ModifyPerm">
+				<label for="Other">Other</label>
+				<input type="radio" name="ModType" id="Other">
+				
+				<div class="RemAcctDiv Hidden">
+					<br><label for="RemEffDate">Effective Date</label>
+					<input type="text" name="RemEffDate" id="RemEffDate">
+				</div>
+				
+				<div class="ModAcctDiv Hidden">
+				</div>
+				
+				<div class="OtherDiv Hidden">
+				</div>
+				
+				<br><label for="AppENVMod">Environment</label>
+				<select name="AppENVMod" id="AppENVMod">
+					<option value="0"></option>
+					<option value="1">CCB</option>
+					<option value="2">MWM</option>
+					<option value="3">MDM</option>
+					<option value="4">BCA</option>
+				</select><br>
+				<div class="SelectCCBMod Hidden">
+					<label for="ccbdiag">CCBDIAG</label>
+					<input type="checkbox" name="ccbdiag" id="ccbdiag">
+					<label for="ccbtrn1">CCBTRN01</label>
+					<input type="checkbox" name="ccbtrn1" id="ccbtrn1">
+					<label for="ccbtrn3">CCBTRN03</label>
+					<input type="checkbox" name="ccbtrn3" id="ccbtrn3">
+					<label for="ccbdev2">CCBDEV2</label>
+					<input type="checkbox" name="ccbdev2" id="ccbdev2">
+					<label for="ccbint2">CCBINT2</label>
+					<input type="checkbox" name="ccbint2" id="ccbint2">
+					<label for="ccbprd">CCBPRD</label>
+					<input type="checkbox" name="ccbprd" id="ccbprd">
+				</div>
+				<div class="SelectMWMMod Hidden">
+					<label for="mwmdev2">MWMDEV2</label>
+					<input type="checkbox" name="mwmdev2" id="mwmdev2">
+					<label for="mwmint2">MWMINT2</label>
+					<input type="checkbox" name="mwmint2" id="mwmint2">
+					<label for="mwmprd">MWMPRD</label>
+					<input type="checkbox" name="mwmprd" id="mwmprd">
+				</div>
+				<div class="SelectMDMMod Hidden">
+					<label for="mdmdev2">MDMDEV2</label>
+					<input type="checkbox" name="mdmdev2" id="mdmdev2">
+					<label for="mdmint2">MDMINT2</label>
+					<input type="checkbox" name="mdmint2" id="mdmint2">
+					<label for="mdmprd">MDMPRD</label>
+					<input type="checkbox" name="mdmprd" id="mdmprd">
+				</div>
+				<div class="SelectBCAMod Hidden">
+					<label for="bcadev2">BCADEV2</label>
+					<input type="checkbox" name="bcadev2" id="bcadev2">
+					<label for="bcaint2">BCAINT2</label>
+					<input type="checkbox" name="bcaint2" id="bcaint2">
+					<label for="bcaprd">BCAPRD</label>
+					<input type="checkbox" name="bcaprd" id="bcaprd">
+				</div>
+			</div>
+			
 		</div>
+		
 		<div class="CreateReport Hidden">
 			Create Report Stuff
 		</div>
+		
 		<div class="ModifyReport Hidden">
 			Modify Report Stuff
 		</div>
 		<br>
-		<div class="Applications Hidden">
 		
-		<!--
-			<div>
-				<label for="CCBTST">CCB Test</label>
-				<input type="checkbox" name="CCBTST" id="CCBTST">
-				<label for="CCBPRD">CCB Production</label>
-				<input type="checkbox" name="CCBPRD" id="CCBPRD">
-				<label for="CCBTRN">CCB Training</label>
-				<input type="checkbox" name="CCBTRN" id="CCBTRN">
-			</div>
-			<div>
-				<label for="MWMTST">MWM Test</label>
-				<input type="checkbox" name="MWMTST" id="MWMTST">
-				<label for="MWMPRD">MWM Production</label>
-				<input type="checkbox" name="MWMPRD" id="MWMPRD">
-				<label for="MWMTRN">MWM Training</label>
-				<input type="checkbox" name="MWMTRN" id="MWMTRN">
-			</div>
-			<div>
-				<label for="MDMTST">MDM Test</label>
-				<input type="checkbox" name="MDMTST" id="MDMTST">
-				<label for="MDMPRD">MDM Production</label>
-				<input type="checkbox" name="MDMPRD" id="MDMPRD">
-				<label for="MDMTRN">MDM Training</label>
-				<input type="checkbox" name="MDMTRN" id="MDMTRN">
-			</div>
-			<div>
-				<label for="BCATEST">BCA Test</label>
-				<input type="checkbox" name="BCATEST" id="BCATEST">
-				<label for="BCAPRD">BCA Production</label>
-				<input type="checkbox" name="BCAPRD" id="BCAPRD">
-				<label for="BCATRN">BCA Training</label>
-				<input type="checkbox" name="BCATRN" id="BCATRN">
-			</div>
-			-->
-			
-			<label for="AppENV">Environment</label>
-			<select name="AppENV" id="AppENV">
-				<option value="0"></option>
-				<option value="1">CCB</option>
-				<option value="2">MWM</option>
-				<option value="3">MDM</option>
-				<option value="4">BCA</option>
-			</select><br>
-			<div class="SelectCCB Hidden">
-				<label for="ccbdiag">CCBDIAG</label>
-				<input type="checkbox" name="ccbdiag" id="ccbdiag">
-				<label for="ccbtrn1">CCBTRN01</label>
-				<input type="checkbox" name="ccbtrn1" id="ccbtrn1">
-				<label for="ccbtrn3">CCBTRN03</label>
-				<input type="checkbox" name="ccbtrn3" id="ccbtrn3">
-				<label for="ccbdev2">CCBDEV2</label>
-				<input type="checkbox" name="ccbdev2" id="ccbdev2">
-				<label for="ccbint2">CCBINT2</label>
-				<input type="checkbox" name="ccbint2" id="ccbint2">
-				<label for="ccbprd">CCBPRD</label>
-				<input type="checkbox" name="ccbprd" id="ccbprd">
-			</div>
-			<div class="SelectMWM Hidden">
-				<label for="mwmdev2">MWMDEV2</label>
-				<input type="checkbox" name="mwmdev2" id="mwmdev2">
-				<label for="mwmint2">MWMINT2</label>
-				<input type="checkbox" name="mwmint2" id="mwmint2">
-				<label for="mwmprd">MWMPRD</label>
-				<input type="checkbox" name="mwmprd" id="mwmprd">
-			</div>
-			<div class="SelectMDM Hidden">
-				<label for="mdmdev2">MDMDEV2</label>
-				<input type="checkbox" name="mdmdev2" id="mdmdev2">
-				<label for="mdmint2">MDMINT2</label>
-				<input type="checkbox" name="mdmint2" id="mdmint2">
-				<label for="mdmprd">MDMPRD</label>
-				<input type="checkbox" name="mdmprd" id="mdmprd">
-			</div>
-			<div class="SelectBCA Hidden">
-				<label for="bcadev2">BCADEV2</label>
-				<input type="checkbox" name="bcadev2" id="bcadev2">
-				<label for="bcaint2">BCAINT2</label>
-				<input type="checkbox" name="bcaint2" id="bcaint2">
-				<label for="bcaprd">BCAPRD</label>
-				<input type="checkbox" name="bcaprd" id="bcaprd">
-			</div>
-			
-			<p>Additional Environments Requested (ie: CCBDEV2/CCBTRN03)<br>
-			<textarea rows="5" cols="60"></textarea></p>
-			<p>Permissions Requested (ie: CM_ALL_SERVICES)<br>
-			<textarea rows="5" cols="60"></textarea></p>
-			
-			<label for="AppDateStart">Effective Date</label>
-			<input type="text" name="AppDateStart" id="AppDateStart"><br>
-			<label for="AppDateEnd">Date Ending</label>
-			<input type="text" name="AppDateEnd" id="AppDateEnd"><br><br>
-			
-			<label for="ConCheck">Contractor</label>
-			<input id="ConCheck" name="ConCheck" type="checkbox"><br>
-			<div class="Contractor Hidden">
-				<label for="CCompany">Company</label>
-				<input name="CCompany" id="CCompany" type="text">
-			</div>
-		</div>
-		
-		<div class="Weblogic Hidden">
-			<div>
-				<label for="SOADEV2">SOADEV2</label>
-				<input type="checkbox" name="SOADEV2" id="SOADEV2">
-				<label for="SOAINT2">SOAINT2</label>
-				<input type="checkbox" name="SOAINT2" id="SOAINT2">
-				<label for="SOAPRD">SOAPRD</label>
-				<input type="checkbox" name="SOAPRD" id="SOAPRD">
-			</div>
-			<div>
-				<label for="SOAMDMDEV2">SOAMDMDEV2</label>
-				<input type="checkbox" name="SOAMDMDEV2" id="SOAMDMDEV2">
-				<label for="SOAMDMINT2">SOAMDMINT2</label>
-				<input type="checkbox" name="SOAMDMINT2" id="SOAMDMINT2">
-				<label for="SOAMDMPRD">SOAMDMPRD</label>
-				<input type="checkbox" name="SOAMDMPRD" id="SOAMDMPRD">
-			</div>
-			<div>
-				<label for="OSBDEV2">OSBDEV2</label>
-				<input type="checkbox" name="OSBDEV2" id="OSBDEV2">
-				<label for="OSBMDMINT2">OSBMDMINT2</label>
-				<input type="checkbox" name="OSBMDMINT2" id="OSBMDMINT2">
-				<label for="OSBMDMPRD">OSBMDMPRD</label>
-				<input type="checkbox" name="OSBMDMPRD" id="OSBMDMPRD">
-			</div>
-			<div>
-				<label for="BCADEV2">BCADEV2</label>
-				<input type="checkbox" name="BCADEV2" id="BCADEV2">
-				<label for="BCAINT2">BCAINT2</label>
-				<input type="checkbox" name="BCAINT2" id="BCAINT2">
-				<label for="BCAPRD">BCAPRD</label>
-				<input type="checkbox" name="BCAPRD" id="BCAPRD">
-			</div>
-			<p>Permissions and Environments<br>
-			<textarea rows="5" cols="60"></textarea></p>
-			<label for="WLDate">Effective Date</label>
-			<input type="text" name="WLDate" id="WLDate">
-		</div>
 		
 		<div class="Server Hidden">
 			Some Servers

@@ -25,6 +25,11 @@ $(document).ready(function(){
 		$('.Applications').show();
 	});
 	
+	$('#Application2').click(function() {
+		HideCreate();
+		$('.ModApp').show();
+	});
+	
 	$('#Weblogic').click(function() {
 		HideCreate();
 		$('.Weblogic').show();
@@ -39,6 +44,31 @@ $(document).ready(function(){
 		SelectApp();
 	});
 	
+	$('#AppENVMod').change(function() {
+		SelectAppMod();
+	});
+	
+	$('#RemoveAcct').click(function() {
+		HideMods();
+		$('#RemAcctDiv').show();
+	});
+	
+	$('#ModifyPerm').click(function() {
+		HideMods();
+		$('#ModAcctDiv').show();
+	});
+	
+	$('#Other').click(function() {
+		HideMods();
+		$('#OtherDiv').show();
+	});
+	
+	$('#ModifyPerm').click(function() {
+	});
+	
+	$('#Other').click(function() {
+	});
+	
 	$('#ConCheck').change(function() {
 		if ($(this).prop('checked') == true)
 			$('.Contractor').show();
@@ -49,6 +79,7 @@ $(document).ready(function(){
 	$('#AppDateStart').datepicker({});
 	$('#AppDateEnd').datepicker({});
 	$('#WLDate').datepicker({});
+	$('#RemEffDate').datepicker({});
 });
 
 function HideAll(){
@@ -59,6 +90,7 @@ function HideAll(){
 	$('.Applications').hide();
 	$('.Weblogic').hide();
 	$('.Server').hide();
+	$('.ModApp').hide();
 }
 
 function HideCreate(){
@@ -72,6 +104,19 @@ function HideCheck(){
 	$('.SelectMWM').hide();
 	$('.SelectMDM').hide();
 	$('.SelectBCA').hide();
+}
+
+function HideCheckMod(){
+	$('.SelectCCBMod').hide();
+	$('.SelectMWMMod').hide();
+	$('.SelectMDMMod').hide();
+	$('.SelectBCAMod').hide();
+}
+
+function HideMods(){
+	$('.RemAcctDiv').show();
+	$('.ModAcctDiv').show();
+	$('.OtherDiv').show();	
 }
 
 function SelectApp(){
@@ -93,5 +138,27 @@ function SelectApp(){
 	}
 	else if ($('#AppENV').val() == '0'){
 		HideCheck();
+	}
+}
+
+function SelectAppMod(){
+	if ($('#AppENVMod').val() == '1'){
+		HideCheckMod();
+		$('.SelectCCBMod').show();
+	}
+	else if ($('#AppENVMod').val() == '2'){
+		HideCheckMod();
+		$('.SelectMWMMod').show();
+	}
+	else if ($('#AppENVMod').val() == '3'){
+		HideCheckMod();
+		$('.SelectMDMMod').show();
+	}
+	else if ($('#AppENVMod').val() == '4'){
+		HideCheckMod();
+		$('.SelectBCAMod').show();
+	}
+	else if ($('#AppENVMod').val() == '0'){
+		HideCheckMod();
 	}
 }
