@@ -10,16 +10,6 @@ $(document).ready(function(){
 		$('.ModifyAccount').show();
 	});
 	
-	$('#CreateRpt').click(function() {
-		HideAll();
-		$('.CreateReport').show();
-	});
-	
-	$('#ModifyRpt').click(function() {
-		HideAll();
-		$('.ModifyReport').show();
-	});
-	
 	$('#Application').click(function() {
 		HideCreate();
 		$('.Applications').show();
@@ -35,9 +25,29 @@ $(document).ready(function(){
 		$('.Weblogic').show();
 	});
 	
+	$('#Weblogic2').click(function() {
+		HideCreate();
+		$('.ModifyWeblogic').show();
+	});
+	
 	$('#Server').click(function() {
 		HideCreate();
 		$('.Server').show();
+	});
+	
+	$('#Server2').click(function() {
+		HideCreate();
+		$('.ModServer').show();
+	});
+	
+	$('#SVN').click(function() {
+		HideCreate();
+		$('.SVN').show();
+	});
+	
+	$('#SVN2').click(function() {
+		HideCreate();
+		$('.ModSVN').show();
 	});
 	
 	$('#AppENV').change(function() {
@@ -50,23 +60,59 @@ $(document).ready(function(){
 	
 	$('#RemoveAcct').click(function() {
 		HideMods();
-		$('#RemAcctDiv').show();
+		$('.RemAcctDiv').show();
 	});
 	
 	$('#ModifyPerm').click(function() {
 		HideMods();
-		$('#ModAcctDiv').show();
+		$('.ModAcctDiv').show();
 	});
 	
 	$('#Other').click(function() {
 		HideMods();
-		$('#OtherDiv').show();
+		$('.OtherDiv').show();
 	});
 	
-	$('#ModifyPerm').click(function() {
+	$('#RemoveAcctWL').click(function() {
+		HideWLMod();
 	});
 	
-	$('#Other').click(function() {
+	$('#ModifyPermWL').click(function() {
+		HideWLMod();
+		$('.ModPermWL').show();
+	});
+	
+	$('#ModOtherWL').click(function() {
+		HideWLMod();
+		$('.ModOtherWL').show();
+	});
+	
+	$('#RemoveAcctServer').click(function() {
+		HideWLMod();
+	});
+	
+	$('#ModifyPermServer').click(function() {
+		HideWLMod();
+		$('.ModPermServ').show()
+	});
+	
+	$('#ModOtherServer').click(function() {
+		HideWLMod();
+		$('.ModPermOther').show()
+	});
+	
+	$('#RemoveAcctSVN').click(function() {
+		HideWLMod();
+	});
+	
+	$('#ModifyPermSVN').click(function() {
+		HideWLMod();
+		$('.ModSVNPerm').show();
+	});
+	
+	$('#ModOtherSVN').click(function() {
+		HideWLMod();
+		$('.ModSVNOther').show();
 	});
 	
 	$('#ConCheck').change(function() {
@@ -76,27 +122,60 @@ $(document).ready(function(){
 			$('.Contractor').hide();
 	});
 	
+	$('#AddPerm').change(function() {
+		if ($(this).prop('checked') == true)
+			$('.AddPerm').show();
+		else
+			$('.AddPerm').hide();
+	});
+	
+	$('#RemovePerm').change(function() {
+		if ($(this).prop('checked') == true)
+			$('.RemPerm').show();
+		else
+			$('.RemPerm').hide();
+	});
+	
 	$('#AppDateStart').datepicker({});
 	$('#AppDateEnd').datepicker({});
 	$('#WLDate').datepicker({});
+	$('#ServerDate').datepicker({});
+	$('#OtherEffDate').datepicker({});
+	$('#AddPermEffDate').datepicker({});
+	$('#SVNDate').datepicker({});
 	$('#RemEffDate').datepicker({});
+	$('#ServerModDate').datepicker({});
+	$('#SVNModDate').datepicker({});
 });
+
+function HideWLMod(){
+	$('.ModPermWL').hide();
+	$('.ModOtherWL').hide();
+	$('.ModPermServ').hide();
+	$('.ModPermOther').hide();
+	$('.ModSVNPerm').hide();
+	$('.ModSVNOther').hide();
+}
 
 function HideAll(){
 	$('.CreateAccount').hide();
 	$('.ModifyAccount').hide();
-	$('.CreateReport').hide();
-	$('.ModifyReport').hide();
 	$('.Applications').hide();
 	$('.Weblogic').hide();
 	$('.Server').hide();
 	$('.ModApp').hide();
+	$('.ModifyWeblogic').hide()
 }
 
 function HideCreate(){
 	$('.Applications').hide();
 	$('.Weblogic').hide();
 	$('.Server').hide();
+	$('.SVN').hide();
+	$('.ModApp').hide();
+	$('.ModifyWeblogic').hide();
+	$('.ModServer').hide();
+	$('.ModSVN').hide();
 }
 
 function HideCheck(){
@@ -114,9 +193,9 @@ function HideCheckMod(){
 }
 
 function HideMods(){
-	$('.RemAcctDiv').show();
-	$('.ModAcctDiv').show();
-	$('.OtherDiv').show();	
+	$('.RemAcctDiv').hide();
+	$('.ModAcctDiv').hide();
+	$('.OtherDiv').hide();	
 }
 
 function SelectApp(){

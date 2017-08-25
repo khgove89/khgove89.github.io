@@ -17,10 +17,6 @@
 			<input type="radio" name="ReqType" id="CreateAcct">
 			<label for="ModifyAcct">Modify Account</label>
 			<input type="radio" name="ReqType" id="ModifyAcct">
-			<label for="CreateRpt">Create Report</label>
-			<input type="radio" name="ReqType" id="CreateRpt">
-			<label for="ModifyRpt">Modify Report</label>
-			<input type="radio" name="ReqType" id="ModifyRpt">
 		</div>
 		<br>
 		<div class="CreateAccount Hidden">
@@ -29,7 +25,9 @@
 			<label for="Weblogic">Weblogic</label>
 			<input type="radio" name="ServiceGroup" id="Weblogic">
 			<label for="Server">Server</label>
-			<input type="radio" name="ServiceGroup" id="Server"><br><br>
+			<input type="radio" name="ServiceGroup" id="Server">
+			<label for="SVN">Subversion</label>
+			<input type="radio" name="ServiceGroup" id="SVN"><br><br>
 			<label for="FullNameCA">Full Name</label>
 			<input type="text" name="FNCA"><br>
 			<label for="NetworkIDCA">Network User ID</label>
@@ -87,6 +85,8 @@
 				<textarea rows="5" cols="60"></textarea></p>
 				<p>Permissions Requested (ie: CM_ALL_SERVICES_READ)<br>
 				<textarea rows="5" cols="60"></textarea></p>
+				<p>Purpose/Business Justification<br>
+				<textarea rows="5" cols="60"></textarea></p>
 				
 				<label for="AppDateStart">Effective Date</label>
 				<input type="text" name="AppDateStart" id="AppDateStart"><br>
@@ -97,16 +97,12 @@
 				<input id="ConCheck" name="ConCheck" type="checkbox"><br>
 				<div class="Contractor Hidden">
 					<label for="CCompany">Company</label>
-					<input name="CCompany" id="CCompany" type="text">
+					<input name="CCompany" id="CCompany" type="text"><br>
+					<label for="CCompany">E-Mail</label>
+					<input name="CCompany" id="CCompany" type="text"><br>
+					<label for="CCompany">Phone</label>
+					<input name="CCompany" id="CCompany" type="text"><br>
 				</div>
-				
-				
-				<!--<select name="Who4" id="Who4">
-					<option value="0">DWP Employee</option>
-					<option value="1">Other City Agency</option>
-					<option value="2">Contractor</option>
-				</select><br>
-				-->
 			</div>
 			
 			<div class="Weblogic Hidden">
@@ -146,7 +142,21 @@
 				<textarea rows="5" cols="60"></textarea></p>
 				<label for="WLDate">Effective Date</label>
 				<input type="text" name="WLDate" id="WLDate">
-			</div>			
+			</div>
+			
+			<div class="Server Hidden">
+				<p>Permissions and Environments<br>
+				<textarea rows="5" cols="60"></textarea></p>
+				<label for="ServerDate">Effective Date</label>
+				<input type="text" name="ServerDate" id="ServerDate">
+			</div>
+			
+			<div class="SVN Hidden">
+				<p>Permissions and Environments<br>
+				<textarea rows="5" cols="60"></textarea></p>
+				<label for="SVNDate">Effective Date</label>
+				<input type="text" name="SVNDate" id="SVNDate">
+			</div>
 		</div>
 		
 		<div class="ModifyAccount Hidden">
@@ -155,7 +165,9 @@
 			<label for="Weblogic2">Weblogic</label>
 			<input type="radio" name="ServiceGroup" id="Weblogic2">
 			<label for="Server2">Server</label>
-			<input type="radio" name="ServiceGroup" id="Server2"><br><br>
+			<input type="radio" name="ServiceGroup" id="Server2">
+			<label for="SVN2">Subversion</label>
+			<input type="radio" name="ServiceGroup" id="SVN2"><br><br>
 			<label for="FullNameMA">Full Name</label>
 			<input type="text" name="FNMA"><br>
 			<label for="NetworkIDMA">Network User ID</label>
@@ -175,9 +187,31 @@
 				</div>
 				
 				<div class="ModAcctDiv Hidden">
+					<label for="AddPerm">Add Permissions</label>
+					<input type="checkbox" name="Permissions" id="AddPerm">
+						
+					<label for="RemovePerm">Remove Permissions</label>
+					<input type="checkbox" name="Permissions" id="RemovePerm">
+						<div class="AddPerm Hidden">
+							<p>Permissions to Add<br>
+							<textarea rows="5" cols="60"></textarea></p>
+							<br><label for="AddPermEffDate">Effective Date</label>
+							<input type="text" name="AddPermEffDate" id="AddPermEffDate">
+						</div>
+					
+						<div class="RemPerm Hidden">
+							<p>Permissions to Remove<br>
+							<textarea rows="5" cols="60"></textarea></p>
+							<br><label for="RemPermEffDate">Effective Date</label>
+							<input type="text" name="RemPermEffDate" id="RemPermEffDate">
+						</div>
 				</div>
 				
 				<div class="OtherDiv Hidden">
+					<p>Describe Changes<br>
+					<textarea rows="5" cols="60"></textarea></p>
+					<br><label for="OtherEffDate">Effective Date</label>
+					<input type="text" name="OtherEffDate" id="OtherEffDate">
 				</div>
 				
 				<br><label for="AppENVMod">Environment</label>
@@ -226,22 +260,110 @@
 					<label for="bcaprd">BCAPRD</label>
 					<input type="checkbox" name="bcaprd" id="bcaprd">
 				</div>
+				
+				<p>Purpose/Business Justification<br>
+				<textarea rows="5" cols="60"></textarea></p>
 			</div>
 			
-		</div>
-		
-		<div class="CreateReport Hidden">
-			Create Report Stuff
-		</div>
-		
-		<div class="ModifyReport Hidden">
-			Modify Report Stuff
-		</div>
-		<br>
-		
-		
-		<div class="Server Hidden">
-			Some Servers
+			<div class="ModifyWeblogic Hidden">
+				<label for="RemoveAcctWL">Remove WebLogic Account</label>
+				<input type="radio" name="ModTypeWL" id="RemoveAcctWL">
+				<label for="ModifyPermWL">Modify WebLogic Account</label>
+				<input type="radio" name="ModTypeWL" id="ModifyPermWL">
+				<label for="ModOtherWL">Other</label>
+				<input type="radio" name="ModTypeWL" id="ModOtherWL"><br>
+				
+				<div class="ModPermWL Hidden">
+					<p>Permissions to Modify<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<div class="ModOtherWL Hidden">
+					<p>Describe Changes<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<br>
+				<div>
+					<label for="SOADEV2">SOADEV2</label>
+					<input type="checkbox" name="SOADEV2" id="SOADEV2">
+					<label for="SOAINT2">SOAINT2</label>
+					<input type="checkbox" name="SOAINT2" id="SOAINT2">
+					<label for="SOAPRD">SOAPRD</label>
+					<input type="checkbox" name="SOAPRD" id="SOAPRD">
+				</div>
+				<div>
+					<label for="SOAMDMDEV2">SOAMDMDEV2</label>
+					<input type="checkbox" name="SOAMDMDEV2" id="SOAMDMDEV2">
+					<label for="SOAMDMINT2">SOAMDMINT2</label>
+					<input type="checkbox" name="SOAMDMINT2" id="SOAMDMINT2">
+					<label for="SOAMDMPRD">SOAMDMPRD</label>
+					<input type="checkbox" name="SOAMDMPRD" id="SOAMDMPRD">
+				</div>
+				<div>
+					<label for="OSBDEV2">OSBDEV2</label>
+					<input type="checkbox" name="OSBDEV2" id="OSBDEV2">
+					<label for="OSBMDMINT2">OSBMDMINT2</label>
+					<input type="checkbox" name="OSBMDMINT2" id="OSBMDMINT2">
+					<label for="OSBMDMPRD">OSBMDMPRD</label>
+					<input type="checkbox" name="OSBMDMPRD" id="OSBMDMPRD">
+				</div>
+				<div>
+					<label for="BCADEV2">BCADEV2</label>
+					<input type="checkbox" name="BCADEV2" id="BCADEV2">
+					<label for="BCAINT2">BCAINT2</label>
+					<input type="checkbox" name="BCAINT2" id="BCAINT2">
+					<label for="BCAPRD">BCAPRD</label>
+					<input type="checkbox" name="BCAPRD" id="BCAPRD">
+				</div>
+				   
+				<br><label for="WLModDate">Effective Date</label>
+				<input type="text" name="WLModDate" id="WLModDate">
+			</div>
+			
+			<div class="ModServer Hidden">
+				<label for="RemoveAcctServer">Remove Server Account</label>
+				<input type="radio" name="ModTypeServer" id="RemoveAcctServer">
+				<label for="ModifyPermServer">Modify Server Account</label>
+				<input type="radio" name="ModTypeServer" id="ModifyPermServer">
+				<label for="ModOtherServer">Other</label>
+				<input type="radio" name="ModTypeServer" id="ModOtherServer"><br>
+							
+				<div class="ModPermServ Hidden">
+					<p>Permissions to Modify<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<div class="ModPermOther Hidden">
+					<p>Describe Changes<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<br><label for="ServerModDate">Effective Date</label>
+				<input type="text" name="ServerModDate" id="ServerModDate">
+			</div>
+			
+			<div class="ModSVN Hidden">
+				<label for="RemoveAcctSVN">Remove Subversion Account</label>
+				<input type="radio" name="ModTypeSVN" id="RemoveAcctSVN">
+				<label for="ModifyPermSVN">Modify Subversion Account</label>
+				<input type="radio" name="ModTypeSVN" id="ModifyPermSVN">
+				<label for="ModOtherSVN">Other</label>
+				<input type="radio" name="ModTypeSVN" id="ModOtherSVN"><br>
+				
+				<div class="ModSVNPerm Hidden">
+					<p>Permissions to Modify<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<div class="ModSVNOther Hidden">
+					<p>Describe Changes<br>
+					<textarea rows="5" cols="60"></textarea></p>
+				</div>
+				
+				<br><label for="SVNModDate">Effective Date</label>
+				<input type="text" name="SVNModDate" id="SVNModDate">
+			</div>
 		</div>
 	</div>
 </div>
