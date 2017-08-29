@@ -146,6 +146,16 @@ $(document).ready(function(){
 	$('#RemEffDate').datepicker({});
 	$('#ServerModDate').datepicker({});
 	$('#SVNModDate').datepicker({});
+	$('#WLEndDate').datepicker({});
+	$('#ServerEndDate').datepicker({});
+	$('#SVNEndDate').datepicker({});
+	$('#RemEffDateEnd').datepicker({});
+	$('#AddPermEffDateEnd').datepicker({});
+	$('#RemPermEffDateEnd').datepicker({});
+	$('#OtherEffDateEnd').datepicker({});
+	$('#WLModDateEnd').datepicker({});
+	$('#ServerModDateEnd').datepicker({});
+	$('#SVNModDateEnd').datepicker({});
 });
 
 function HideWLMod(){
