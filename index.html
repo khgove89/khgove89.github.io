@@ -11,7 +11,7 @@
 <body>
 <div class="Main">       	   
 	<div class="ReqType">
-		Request Type
+		<b>Request Type</b>
 		<div class="RadioSet">
 			<label for="CreateAcct">Create Account</label>
 			<input type="radio" name="ReqType" id="CreateAcct">
@@ -28,9 +28,9 @@
 			<input type="radio" name="ServiceGroup" id="Server">
 			<label for="SVN">Subversion</label>
 			<input type="radio" name="ServiceGroup" id="SVN"><br><br>
-			<label for="FullNameCA">Full Name</label>
+			<label for="FullNameCA">Full Name</label><font color="red">*</font>
 			<input type="text" name="FNCA"><br>
-			<label for="NetworkIDCA">Network User ID</label>
+			<label for="NetworkIDCA">Network User ID</label><font color="red">*</font>
 			<input type="text" name="NUIDCA">
 			
 			<div class="Applications Hidden">	
@@ -45,10 +45,6 @@
 				<div class="SelectCCB Hidden">
 					<label for="ccbdiag">CCBDIAG</label>
 					<input type="checkbox" name="ccbdiag" id="ccbdiag">
-					<label for="ccbtrn1">CCBTRN01</label>
-					<input type="checkbox" name="ccbtrn1" id="ccbtrn1">
-					<label for="ccbtrn3">CCBTRN03</label>
-					<input type="checkbox" name="ccbtrn3" id="ccbtrn3">
 					<label for="ccbdev2">CCBDEV2</label>
 					<input type="checkbox" name="ccbdev2" id="ccbdev2">
 					<label for="ccbint2">CCBINT2</label>
@@ -85,16 +81,16 @@
 					<input type="checkbox" name="bcaprd" id="bcaprd">
 				</div>
 				
-				<p>Additional Environments Requested (ie: CCBDEV2/CCBTRN03)<br>
+				<p>Additional Environments Requested<font color="red">*</font>
+				<br>(ie: CCBDEV2/CCBTRN03)<br>
 				<textarea rows="5" cols="60"></textarea></p>
-				<p>Permissions Requested (ie: CM_ALL_SERVICES_READ)<br>
-				<textarea rows="5" cols="60"></textarea></p>
-				<p>Purpose/Business Justification<br>
+				<p>Permissions Requested<font color="red">*</font>
+				<br>(ie: CM_ALL_SERVICES_READ)<br>
 				<textarea rows="5" cols="60"></textarea></p>
 				
-				<label for="AppDateStart">Effective Date</label>
+				<label for="AppDateStart">Effective Date</label><font color="red">*</font>
 				<input type="text" name="AppDateStart" id="AppDateStart"><br>
-				<label for="AppDateEnd">Date Ending</label>
+				<label for="AppDateEnd">Date Ending</label><font color="red">*</font>
 				<input type="text" name="AppDateEnd" id="AppDateEnd"><br><br>
 				
 				<label for="ConCheck">Contractor or Outside Department</label>
@@ -110,6 +106,7 @@
 			</div>
 			
 			<div class="Weblogic Hidden">
+				<br>
 				<div>
 					<label for="SOADEV2">SOADEV2</label>
 					<input type="checkbox" name="SOADEV2" id="SOADEV2">
@@ -142,30 +139,30 @@
 					<label for="BCAPRD">BCAPRD</label>
 					<input type="checkbox" name="BCAPRD" id="BCAPRD">
 				</div>
-				<p>Permissions and Environments<br>
+				<p>Permissions and Environments<font color="red">*</font><br>
 				<textarea rows="5" cols="60"></textarea></p>
-				<label for="WLDate">Effective Date</label>
+				<label for="WLDate">Effective Date</label><font color="red">*</font>
 				<input type="text" name="WLDate" id="WLDate"><br>
-				<label for="WLEndDate">End Date</label>
+				<label for="WLEndDate">End Date</label><font color="red">*</font>
 				<input type="text" name="WLEndDate" id="WLEndDate">
 			</div>
 			
 			<div class="Server Hidden">
-				<p>Server Hostnames and Permissions<br>
+				<p>Server Hostnames and Permissions<font color="red">*</font><br>
 				<textarea rows="5" cols="60"></textarea></p>
-				<label for="ServerDate">Effective Date</label>
+				<label for="ServerDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="ServerDate" id="ServerDate"><br>
-				<label for="ServerEndDate">End Date</label>
+				<label for="ServerEndDate">End Date<font color="red">*</font></label>
 				<input type="text" name="ServerEndDate" id="ServerEndDate">
 			</div>
 			
 			<div class="SVN Hidden">
-				<p>Subversion Server and Permissions<br>
+				<p>Subversion Server and Permissions<font color="red">*</font><br>
 				(ie: http://wp16vmsvn.joint.ladwp.com/svn/ciscon/trunk/Development/ccb, Read-Only)<br>
 				<textarea rows="5" cols="60"></textarea></p>
-				<label for="SVNDate">Effective Date</label>
+				<label for="SVNDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="SVNDate" id="SVNDate"><br>
-				<label for="SVNEndDate">End Date</label>
+				<label for="SVNEndDate">End Date<font color="red">*</font></label>
 				<input type="text" name="SVNEndDate" id="SVNEndDate">
 			</div>
 		</div>
@@ -179,9 +176,9 @@
 			<input type="radio" name="ServiceGroup" id="Server2">
 			<label for="SVN2">Subversion</label>
 			<input type="radio" name="ServiceGroup" id="SVN2"><br><br>
-			<label for="FullNameMA">Full Name</label>
+			<label for="FullNameMA">Full Name<font color="red">*</font></label>
 			<input type="text" name="FNMA"><br>
-			<label for="NetworkIDMA">Network User ID</label>
+			<label for="NetworkIDMA">Network User ID<font color="red">*</font></label>
 			<input type="text" name="NUIDMA"><br>
 			
 			<div class="ModApp Hidden">
@@ -193,10 +190,8 @@
 				<input type="radio" name="ModType" id="Other">
 				
 				<div class="RemAcctDiv Hidden">
-					<br><label for="RemEffDate">Effective Date</label>
+					<br><label for="RemEffDate">Effective Date<font color="red">*</font></label>
 					<input type="text" name="RemEffDate" id="RemEffDate"><br>
-					<label for="RemEffDateEnd">End Date</label>
-					<input type="text" name="RemEffDateEnd" id="RemEffDateEnd">
 				</div>
 				
 				<div class="ModAcctDiv Hidden">
@@ -206,30 +201,30 @@
 					<label for="RemovePerm">Remove Permissions</label>
 					<input type="checkbox" name="Permissions" id="RemovePerm">
 						<div class="AddPerm Hidden">
-							<p>Permissions to Add<br>
+							<p>Permissions to Add<font color="red">*</font><br>
 							<textarea rows="5" cols="60"></textarea></p>
-							<br><label for="AddPermEffDate">Effective Date</label>
+							<label for="AddPermEffDate">Effective Date<font color="red">*</font></label>
 							<input type="text" name="AddPermEffDate" id="AddPermEffDate"><br>
-							<label for="AddPermEffDateEnd">End Date</label>
+							<label for="AddPermEffDateEnd">End Date<font color="red">*</font></label>
 							<input type="text" name="AddPermEffDateEnd" id="AddPermEffDateEnd">
 						</div>
 					
 						<div class="RemPerm Hidden">
-							<p>Permissions to Remove<br>
+							<p>Permissions to Remove<font color="red">*</font><br>
 							<textarea rows="5" cols="60"></textarea></p>
-							<br><label for="RemPermEffDate">Effective Date</label>
+							<br><label for="RemPermEffDate">Effective Date<font color="red">*</font></label>
 							<input type="text" name="RemPermEffDate" id="RemPermEffDate"><br>
-							<label for="RemPermEffDateEnd">End Date</label>
+							<label for="RemPermEffDateEnd">End Date<font color="red">*</font></label>
 							<input type="text" name="RemPermEffDateEnd" id="RemPermEffDateEnd">
 						</div>
 				</div>
 				
 				<div class="OtherDiv Hidden">
-					<p>Describe Changes<br>
+					<p>Describe Changes<font color="red">*</font><br>
 					<textarea rows="5" cols="60"></textarea></p>
-					<br><label for="OtherEffDate">Effective Date</label>
+					<br><label for="OtherEffDate">Effective Date<font color="red">*</font></label>
 					<input type="text" name="OtherEffDate" id="OtherEffDate"><br>
-					<label for="OtherEffDateEnd">End Date</label>
+					<label for="OtherEffDateEnd">End Date<font color="red">*</font></label>
 					<input type="text" name="OtherEffDateEnd" id="OtherEffDateEnd">
 				</div>
 				
@@ -244,10 +239,6 @@
 				<div class="SelectCCBMod Hidden">
 					<label for="ccbdiag">CCBDIAG</label>
 					<input type="checkbox" name="ccbdiag" id="ccbdiag">
-					<label for="ccbtrn1">CCBTRN01</label>
-					<input type="checkbox" name="ccbtrn1" id="ccbtrn1">
-					<label for="ccbtrn3">CCBTRN03</label>
-					<input type="checkbox" name="ccbtrn3" id="ccbtrn3">
 					<label for="ccbdev2">CCBDEV2</label>
 					<input type="checkbox" name="ccbdev2" id="ccbdev2">
 					<label for="ccbint2">CCBINT2</label>
@@ -290,19 +281,18 @@
 				<label for="ModifyPermWL">Modify WebLogic Account</label>
 				<input type="radio" name="ModTypeWL" id="ModifyPermWL">
 				<label for="ModOtherWL">Other</label>
-				<input type="radio" name="ModTypeWL" id="ModOtherWL"><br>
+				<input type="radio" name="ModTypeWL" id="ModOtherWL"><br><br>
 				
 				<div class="ModPermWL Hidden">
-					<p>Permissions to Modify<br>
-					<textarea rows="5" cols="60"></textarea></p>
+					Permissions to Modify<font color="red">*</font><br>
+					<textarea rows="5" cols="60"></textarea><br><br>
 				</div>
 				
 				<div class="ModOtherWL Hidden">
-					<p>Describe Changes<br>
-					<textarea rows="5" cols="60"></textarea></p>
+					Describe Changes<font color="red">*</font><br>
+					<textarea rows="5" cols="60"></textarea><br><br>
 				</div>
 				
-				<br>
 				<div>
 					<label for="SOADEV2">SOADEV2</label>
 					<input type="checkbox" name="SOADEV2" id="SOADEV2">
@@ -336,10 +326,10 @@
 					<input type="checkbox" name="BCAPRD" id="BCAPRD">
 				</div>
 				   
-				<br><label for="WLModDate">Effective Date</label>
+				<br><label for="WLModDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="WLModDate" id="WLModDate"><br>
-				<label for="WLModDateEnd">End Date</label>
-				<input type="text" name="WLModDateEnd" id="WLModDateEnd">
+				<div id="Hidethis1"><label for="WLModDateEnd">End Date<font color="red">*</font></label>
+				<input type="text" name="WLModDateEnd" id="WLModDateEnd"></div>
 			</div>
 			
 			<div class="ModServer Hidden">
@@ -351,19 +341,19 @@
 				<input type="radio" name="ModTypeServer" id="ModOtherServer"><br>
 							
 				<div class="ModPermServ Hidden">
-					<p>Permissions to Modify<br>
-					<textarea rows="5" cols="60"></textarea></p>
+					<br>Permissions to Modify<font color="red">*</font><br>
+					<textarea rows="5" cols="60"></textarea>
 				</div>
 				
 				<div class="ModPermOther Hidden">
-					<p>Describe Changes<br>
-					<textarea rows="5" cols="60"></textarea></p>
+					<br>Describe Changes<font color="red">*</font><br>
+					<textarea rows="5" cols="60"></textarea>
 				</div>
 				
-				<br><label for="ServerModDate">Effective Date</label>
+				<br><label for="ServerModDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="ServerModDate" id="ServerModDate"><br>
-				<label for="ServerModDateEnd">End Date</label>
-				<input type="text" name="ServerModDateEnd" id="ServerModDateEnd">
+				<div id="Hidethis2"><label for="ServerModDateEnd">End Date<font color="red">*</font></label>
+				<input type="text" name="ServerModDateEnd" id="ServerModDateEnd"></div>
 			</div>
 			
 			<div class="ModSVN Hidden">
@@ -375,27 +365,29 @@
 				<input type="radio" name="ModTypeSVN" id="ModOtherSVN"><br>
 				
 				<div class="ModSVNPerm Hidden">
-					<p>Permissions to Modify<br>
+					<p>Permissions to Modify<font color="red">*</font><br>
 					<textarea rows="5" cols="60"></textarea></p>
 				</div>
 				
 				<div class="ModSVNOther Hidden">
-					<p>Describe Changes<br>
+					<p>Describe Changes<font color="red">*</font><br>
 					<textarea rows="5" cols="60"></textarea></p>
 				</div>
 				
-				<br><label for="SVNModDate">Effective Date</label>
+				<br><label for="SVNModDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="SVNModDate" id="SVNModDate"><br>
-				<label for="SVNModDateEnd">End Date</label>
-				<input type="text" name="SVNModDateEnd" id="SVNModDateEnd">				
+				<div id="Hidethis3"><label for="SVNModDateEnd">End Date<font color="red">*</font></label>
+				<input type="text" name="SVNModDateEnd" id="SVNModDateEnd"></div>	
 			</div>
 		</div>
 		
-		<p>Purpose/Business Justification<br>
+		<p>Purpose/Business Justification<font color="red">*</font><br>
 		<textarea rows="5" cols="60"></textarea></p>
 		
-		<label for="Charge">Charge Number</label>
-		<input type="text" name="Charge" id="Charge">
+		<label for="Charge">Charge Number</label><font color="red">*</font>
+		<input type="text" name="Charge" id="Charge"><br>
+		<label for="ChargeNum">Charge Number Description</label>
+		<input type="text" name="ChargeNum" id="ChargeNum" disabled>
 	</div>
 </div>
 </body>

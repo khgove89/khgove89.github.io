@@ -75,44 +75,53 @@ $(document).ready(function(){
 	
 	$('#RemoveAcctWL').click(function() {
 		HideWLMod();
+		$('#Hidethis1').hide();
 	});
 	
 	$('#ModifyPermWL').click(function() {
 		HideWLMod();
 		$('.ModPermWL').show();
+		$('#Hidethis1').show();
 	});
 	
 	$('#ModOtherWL').click(function() {
 		HideWLMod();
 		$('.ModOtherWL').show();
+		$('#Hidethis1').show();
 	});
 	
 	$('#RemoveAcctServer').click(function() {
 		HideWLMod();
+		$('#Hidethis2').hide();
 	});
 	
 	$('#ModifyPermServer').click(function() {
 		HideWLMod();
 		$('.ModPermServ').show()
+		$('#Hidethis2').show();
 	});
 	
 	$('#ModOtherServer').click(function() {
 		HideWLMod();
 		$('.ModPermOther').show()
+		$('#Hidethis2').show();
 	});
 	
 	$('#RemoveAcctSVN').click(function() {
 		HideWLMod();
+		$('#Hidethis3').hide();
 	});
 	
 	$('#ModifyPermSVN').click(function() {
 		HideWLMod();
 		$('.ModSVNPerm').show();
+		$('#Hidethis3').show();
 	});
 	
 	$('#ModOtherSVN').click(function() {
 		HideWLMod();
 		$('.ModSVNOther').show();
+		$('#Hidethis3').show();
 	});
 	
 	$('#ConCheck').change(function() {
