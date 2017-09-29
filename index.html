@@ -17,6 +17,8 @@
 			<input type="radio" name="ReqType" id="CreateAcct">
 			<label for="ModifyAcct">Modify Account</label>
 			<input type="radio" name="ReqType" id="ModifyAcct">
+			<label for="Offboard">Offboard Employee</label>
+			<input type="radio" name="ReqType" id="Offboard">
 		</div>
 		<br>
 		<div class="CreateAccount Hidden">
@@ -90,7 +92,7 @@
 				
 				<label for="AppDateStart">Effective Date</label><font color="red">*</font>
 				<input type="text" name="AppDateStart" id="AppDateStart"><br>
-				<label for="AppDateEnd">Date Ending</label><font color="red">*</font>
+				<label for="AppDateEnd">Expiration Date</label><font color="red">*</font>
 				<input type="text" name="AppDateEnd" id="AppDateEnd"><br><br>
 				
 				<label for="ConCheck">Contractor or Outside Department</label>
@@ -143,7 +145,7 @@
 				<textarea rows="5" cols="60"></textarea></p>
 				<label for="WLDate">Effective Date</label><font color="red">*</font>
 				<input type="text" name="WLDate" id="WLDate"><br>
-				<label for="WLEndDate">End Date</label><font color="red">*</font>
+				<label for="WLEndDate">Expiration Date</label><font color="red">*</font>
 				<input type="text" name="WLEndDate" id="WLEndDate">
 			</div>
 			
@@ -152,7 +154,7 @@
 				<textarea rows="5" cols="60"></textarea></p>
 				<label for="ServerDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="ServerDate" id="ServerDate"><br>
-				<label for="ServerEndDate">End Date<font color="red">*</font></label>
+				<label for="ServerEndDate">Expiration Date<font color="red">*</font></label>
 				<input type="text" name="ServerEndDate" id="ServerEndDate">
 			</div>
 			
@@ -162,7 +164,7 @@
 				<textarea rows="5" cols="60"></textarea></p>
 				<label for="SVNDate">Effective Date<font color="red">*</font></label>
 				<input type="text" name="SVNDate" id="SVNDate"><br>
-				<label for="SVNEndDate">End Date<font color="red">*</font></label>
+				<label for="SVNEndDate">Expiration Date<font color="red">*</font></label>
 				<input type="text" name="SVNEndDate" id="SVNEndDate">
 			</div>
 		</div>
@@ -190,7 +192,7 @@
 				<input type="radio" name="ModType" id="Other">
 				
 				<div class="RemAcctDiv Hidden">
-					<br><label for="RemEffDate">Effective Date<font color="red">*</font></label>
+					<br><label for="RemEffDate">Expiration Date<font color="red">*</font></label>
 					<input type="text" name="RemEffDate" id="RemEffDate"><br>
 				</div>
 				
@@ -205,7 +207,7 @@
 							<textarea rows="5" cols="60"></textarea></p>
 							<label for="AddPermEffDate">Effective Date<font color="red">*</font></label>
 							<input type="text" name="AddPermEffDate" id="AddPermEffDate"><br>
-							<label for="AddPermEffDateEnd">End Date<font color="red">*</font></label>
+							<label for="AddPermEffDateEnd">Expiration Date<font color="red">*</font></label>
 							<input type="text" name="AddPermEffDateEnd" id="AddPermEffDateEnd">
 						</div>
 					
@@ -214,7 +216,7 @@
 							<textarea rows="5" cols="60"></textarea></p>
 							<br><label for="RemPermEffDate">Effective Date<font color="red">*</font></label>
 							<input type="text" name="RemPermEffDate" id="RemPermEffDate"><br>
-							<label for="RemPermEffDateEnd">End Date<font color="red">*</font></label>
+							<label for="RemPermEffDateEnd">Expiration Date<font color="red">*</font></label>
 							<input type="text" name="RemPermEffDateEnd" id="RemPermEffDateEnd">
 						</div>
 				</div>
@@ -224,7 +226,7 @@
 					<textarea rows="5" cols="60"></textarea></p>
 					<br><label for="OtherEffDate">Effective Date<font color="red">*</font></label>
 					<input type="text" name="OtherEffDate" id="OtherEffDate"><br>
-					<label for="OtherEffDateEnd">End Date<font color="red">*</font></label>
+					<label for="OtherEffDateEnd">Expiration Date<font color="red">*</font></label>
 					<input type="text" name="OtherEffDateEnd" id="OtherEffDateEnd">
 				</div>
 				
@@ -235,6 +237,7 @@
 					<option value="2">MWM</option>
 					<option value="3">MDM</option>
 					<option value="4">BCA</option>
+					<option value="5">ALL</option>
 				</select><br>
 				<div class="SelectCCBMod Hidden">
 					<label for="ccbdiag">CCBDIAG</label>
@@ -326,10 +329,10 @@
 					<input type="checkbox" name="BCAPRD" id="BCAPRD">
 				</div>
 				   
-				<br><label for="WLModDate">Effective Date<font color="red">*</font></label>
-				<input type="text" name="WLModDate" id="WLModDate"><br>
-				<div id="Hidethis1"><label for="WLModDateEnd">End Date<font color="red">*</font></label>
-				<input type="text" name="WLModDateEnd" id="WLModDateEnd"></div>
+				<br><div id="Hidethis1"><label for="WLModDate">Effective Date<font color="red">*</font></label>
+				<input type="text" name="WLModDate" id="WLModDate"><br></div>
+				<label for="WLModDateEnd">Expiration Date<font color="red">*</font></label>
+				<input type="text" name="WLModDateEnd" id="WLModDateEnd">
 			</div>
 			
 			<div class="ModServer Hidden">
@@ -350,10 +353,10 @@
 					<textarea rows="5" cols="60"></textarea>
 				</div>
 				
-				<br><label for="ServerModDate">Effective Date<font color="red">*</font></label>
-				<input type="text" name="ServerModDate" id="ServerModDate"><br>
-				<div id="Hidethis2"><label for="ServerModDateEnd">End Date<font color="red">*</font></label>
-				<input type="text" name="ServerModDateEnd" id="ServerModDateEnd"></div>
+				<br><div id="Hidethis2"><label for="ServerModDate">Effective Date<font color="red">*</font></label>
+				<input type="text" name="ServerModDate" id="ServerModDate"><br></div>
+				<label for="ServerModDateEnd">Expiration Date<font color="red">*</font></label>
+				<input type="text" name="ServerModDateEnd" id="ServerModDateEnd">
 			</div>
 			
 			<div class="ModSVN Hidden">
@@ -374,13 +377,39 @@
 					<textarea rows="5" cols="60"></textarea></p>
 				</div>
 				
-				<br><label for="SVNModDate">Effective Date<font color="red">*</font></label>
-				<input type="text" name="SVNModDate" id="SVNModDate"><br>
-				<div id="Hidethis3"><label for="SVNModDateEnd">End Date<font color="red">*</font></label>
-				<input type="text" name="SVNModDateEnd" id="SVNModDateEnd"></div>	
+				<br><div id="Hidethis3"><label for="SVNModDate">Effective Date<font color="red">*</font></label>
+				<input type="text" name="SVNModDate" id="SVNModDate"><br></div>
+				<label for="SVNModDateEnd">Expiration Date<font color="red">*</font></label>
+				<input type="text" name="SVNModDateEnd" id="SVNModDateEnd">	
 			</div>
 		</div>
 		
+		<div class="Offboard Hidden">
+			<label for="AppChk">Application Access</label>
+			<input id="AppChk" name="AppChk" type="checkbox"><br>
+			<div id="AppChkDiv" class="Hidden">
+				<p>Please list Environments to remove access<font color="red">*</font></p>
+				<textarea rows="5" cols="60"></textarea>
+			</div>
+			
+			<label for="WLChk">Weblogic Access</label>
+			<input id="WLChk" name="WLChk" type="checkbox"><br>
+			<div id="WLChkDiv" class="Hidden">
+				<p>Please list Environments to remove access<font color="red">*</font></p>
+				<textarea rows="5" cols="60"></textarea>
+			</div>
+			
+			<label for="ServerChk">Server Access</label>
+			<input id="ServerChk" name="ServerChk" type="checkbox"><br>
+			<div id="ServerChkDiv" class="Hidden">
+				<p>Please list Environments to remove access<font color="red">*</font></p>
+				<textarea rows="5" cols="60"></textarea>
+			</div>
+			
+			<label for="SVNChk">SVN Access</label>
+			<input id="SVNChk" name="SVNChk" type="checkbox"><br>
+		</div>
+	
 		<p>Purpose/Business Justification<font color="red">*</font><br>
 		<textarea rows="5" cols="60"></textarea></p>
 		

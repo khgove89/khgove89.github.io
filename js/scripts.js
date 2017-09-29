@@ -10,6 +10,11 @@ $(document).ready(function(){
 		$('.ModifyAccount').show();
 	});
 	
+	$('#Offboard').click(function() {
+		HideAll();
+		$('.Offboard').show();
+	});
+	
 	$('#Application').click(function() {
 		HideCreate();
 		$('.Applications').show();
@@ -145,6 +150,27 @@ $(document).ready(function(){
 			$('.RemPerm').hide();
 	});
 	
+	$('#AppChk').change(function() {
+		if ($(this).prop('checked') == true)
+			$('#AppChkDiv').show();
+		else
+			$('#AppChkDiv').hide();
+	});
+	
+	$('#WLChk').change(function() {
+		if ($(this).prop('checked') == true)
+			$('#WLChkDiv').show();
+		else
+			$('#WLChkDiv').hide();
+	});
+	
+	$('#ServerChk').change(function() {
+		if ($(this).prop('checked') == true)
+			$('#ServerChkDiv').show();
+		else
+			$('#ServerChkDiv').hide();
+	});
+	
 	$('#AppDateStart').datepicker({});
 	$('#AppDateEnd').datepicker({});
 	$('#WLDate').datepicker({});
@@ -184,6 +210,7 @@ function HideAll(){
 	$('.Server').hide();
 	$('.ModApp').hide();
 	$('.ModifyWeblogic').hide()
+	$('.Offboard').hide();
 }
 
 function HideCreate(){
